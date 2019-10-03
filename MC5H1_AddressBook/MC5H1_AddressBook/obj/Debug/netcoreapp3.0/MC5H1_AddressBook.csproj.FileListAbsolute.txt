@@ -2,7 +2,6 @@ D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_Addres
 D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_AddressBook\bin\Debug\netcoreapp3.0\appsettings.json
 D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_AddressBook\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
 D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_AddressBook\bin\Debug\netcoreapp3.0\MC5H1_AddressBook.exe
-D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_AddressBook\obj\Debug\netcoreapp3.0\MC5H1_AddressBook.csprojAssemblyReference.cache
 D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_AddressBook\obj\Debug\netcoreapp3.0\staticwebassets\MC5H1_AddressBook.StaticWebAssets.Manifest.cache
 D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_AddressBook\obj\Debug\netcoreapp3.0\staticwebassets\MC5H1_AddressBook.StaticWebAssets.xml
 D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_AddressBook\obj\Debug\netcoreapp3.0\MC5H1_AddressBook.AssemblyInfoInputs.cache

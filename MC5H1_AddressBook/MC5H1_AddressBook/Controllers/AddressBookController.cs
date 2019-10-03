@@ -12,7 +12,7 @@ namespace MC5H1_AddressBook.Controllers
     [Route("contacts")]
     public class AddressBookController : ControllerBase
     {
-        public static List<AddressPage> addressBook { get; set; } = new List<AddressPage> { new AddressPage(1, "Test", "Testington", "test.testington@test.at") };
+        public static List<AddressPage> addressBook { get; set; } = new List<AddressPage> { };
 
         // GET api/values
         // test return:
@@ -25,9 +25,9 @@ namespace MC5H1_AddressBook.Controllers
         //   }
         //]
         [HttpGet]
-        public ActionResult<string> GetPage()
+        public IActionResult GetPage()
         {
-            return Ok(JsonConvert.SerializeObject(addressBook));
+            return Ok(addressBook);
         }
 
 
@@ -46,24 +46,22 @@ namespace MC5H1_AddressBook.Controllers
 
         // POST contacts
         [HttpPost]
-        public ActionResult Post([FromBody] string json)
+        public IActionResult Post([FromBody] AddressPage addressPage)
         { 
-            AddressPage addressPage = JsonConvert.DeserializeObject<AddressPage>(json);
-
             if(ValidateAddressPage(addressPage))
             {
                 addressBook.Add(addressPage);
 
-                if(addressPage.firstName == null)
+                if(addressPage.FirstName == null)
                 {
-                    addressPage.firstName = "";
+                    addressPage.FirstName = "";
                 }
-                if(addressPage.lastName == null)
+                if(addressPage.LastName == null)
                 {
-                    addressPage.lastName = "";
+                    addressPage.LastName = "";
                 }
 
-                return CreatedAtRoute("Person successfully created", addressPage);
+                return Created("Person successfully created", addressPage);
             }
 
             return BadRequest("Invalid input(e.g.required field missing or empty)");
@@ -71,11 +69,11 @@ namespace MC5H1_AddressBook.Controllers
 
         public Boolean ValidateAddressPage(AddressPage addressPage)
         {
-            if (addressPage.email != null && addressPage.email.Length > 0 && addressPage.email.Contains('@') && addressPage.id != 0)
+            if (addressPage.Email != null && addressPage.Email.Length > 0 && addressPage.Email.Contains('@') && addressPage.Id != 0)
             {
                 foreach(var addressP in addressBook)
                 {
-                    if(addressP.id == addressPage.id || addressPage.email.Equals(addressP.email))
+                    if(addressP.Id == addressPage.Id || addressPage.Email.Equals(addressP.Email))
                     {
                         return false;
                     }
@@ -96,7 +94,7 @@ namespace MC5H1_AddressBook.Controllers
 
             foreach(var addressPage in addressBook)
             {
-                if(addressPage.id == personId)
+                if(addressPage.Id == personId)
                 {
                     addressBook.Remove(addressPage);
 
@@ -120,7 +118,7 @@ namespace MC5H1_AddressBook.Controllers
 
             foreach (var addressPage in addressBook)
             {
-                if(addressPage.firstName.Contains(nameFilter) || addressPage.lastName.Contains(nameFilter))
+                if(addressPage.FirstName.Contains(nameFilter) || addressPage.LastName.Contains(nameFilter))
                 {
                     response.Add(addressPage);
                 }
