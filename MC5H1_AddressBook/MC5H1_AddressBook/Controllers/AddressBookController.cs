@@ -12,7 +12,7 @@ namespace MC5H1_AddressBook.Controllers
     [Route("contacts")]
     public class AddressBookController : ControllerBase
     {
-        public static List<AddressPage> addressBook { get; set; } = new List<AddressPage> { new AddressPage(1, "Alex", "Tischlinger", "a.t@test.at") };
+        public static List<AddressPage> addressBook { get; set; } = new List<AddressPage> { new AddressPage(1, "Test", "Testington", "test.testington@test.at") };
 
         // GET api/values
         // test return:
