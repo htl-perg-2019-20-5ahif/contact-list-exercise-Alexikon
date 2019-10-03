@@ -12,7 +12,7 @@ namespace MC5H1_AddressBook.Controllers
     [Route("contacts")]
     public class AddressBookController : ControllerBase
     {
-        public static List<AddressPage> addressBook { get; set; } = new List<AddressPage> { };
+        public static List<AddressPage> addressBook { get; } = new List<AddressPage> { };
 
         // GET api/values
         // test return:
@@ -52,11 +52,11 @@ namespace MC5H1_AddressBook.Controllers
             {
                 addressBook.Add(addressPage);
 
-                if(addressPage.FirstName == null)
+                if(string.IsNullOrEmpty(addressPage.FirstName))
                 {
                     addressPage.FirstName = "";
                 }
-                if(addressPage.LastName == null)
+                if(string.IsNullOrEmpty(addressPage.LastName))
                 {
                     addressPage.LastName = "";
                 }
@@ -107,7 +107,7 @@ namespace MC5H1_AddressBook.Controllers
 
         [HttpGet]
         [Route("findByName")]
-        public IActionResult findByName([FromQuery(Name = "nameFilter")] string nameFilter)
+        public IActionResult FindByName([FromQuery(Name = "nameFilter")] string nameFilter)
         {
             List<AddressPage> response = new List<AddressPage>();
 
@@ -129,7 +129,7 @@ namespace MC5H1_AddressBook.Controllers
                 return BadRequest("Invalid or missing name");
             }
 
-            return Ok(JsonConvert.SerializeObject(response));
+            return Ok(response);
         }
     }
 }

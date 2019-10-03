@@ -21,4 +21,3 @@ D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_Addres
 D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_AddressBook\obj\Debug\netcoreapp3.0\MC5H1_AddressBook.csproj.CopyComplete
 D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_AddressBook\obj\Debug\netcoreapp3.0\MC5H1_AddressBook.dll
 D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_AddressBook\obj\Debug\netcoreapp3.0\MC5H1_AddressBook.pdb
-D:\Windows\Desktop\contact-list-exercise-Alexikon\MC5H1_AddressBook\MC5H1_AddressBook\obj\Debug\netcoreapp3.0\MC5H1_AddressBook.csprojAssemblyReference.cache
